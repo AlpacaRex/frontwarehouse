@@ -62,7 +62,7 @@ export default {
       this.$router.push('/');
     },
     ppp: function(){
-      if (!$store.state.islogin) {
+      if (this.$session.get("id") === 0) {
         this.$router.push("/login");
       } else {
         this.$axios({
